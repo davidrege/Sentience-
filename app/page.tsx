@@ -31,7 +31,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Cycle Wheel */}
       <FadeIn delay={300}>
         <CycleWheel />
       </FadeIn>
