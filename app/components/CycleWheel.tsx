@@ -59,7 +59,6 @@ export default function CycleWheel() {
     setOffset(o => (o + d + 360) % 360)
   }
 
-  const [indX, indY] = pt(R.knob - 10, offset)
   const [sweepX, sweepY] = pt(R.outer - 2, 0)
 
   return (
@@ -103,13 +102,11 @@ export default function CycleWheel() {
           style={{ cursor: dragging ? 'grabbing' : 'grab' }}
           onPointerDown={onPointerDown}
         />
-        {[-10, -3, 4, 11].map(yOff => (
-          <line key={yOff}
-            x1={CX - 14} y1={CY + yOff} x2={CX + 14} y2={CY + yOff}
-            stroke="#ddd" strokeWidth="0.5" style={{ pointerEvents: 'none' }}/>
-        ))}
-        <circle cx={indX} cy={indY} r={2.5} fill="#111"
-          style={{ pointerEvents: 'none' }}/>
+        {/* Crosshair */}
+        <line x1={CX - R.knob + 8} y1={CY} x2={CX + R.knob - 8} y2={CY}
+          stroke="#bbb" strokeWidth="0.6" style={{ pointerEvents: 'none' }}/>
+        <line x1={CX} y1={CY - R.knob + 8} x2={CX} y2={CY + R.knob - 8}
+          stroke="#bbb" strokeWidth="0.6" style={{ pointerEvents: 'none' }}/>
       </svg>
     </figure>
   )
