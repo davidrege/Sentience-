@@ -25,7 +25,7 @@ export default function Home() {
           letterSpacing: "-0.02em",
           marginBottom: "1.5lh",
         }}>
-          Sentience
+          SENTIENCE
         </h1>
         <p style={{ maxWidth: "52ch", color: "#444", lineHeight: 1.7 }}>
           The next generation of intelligent systems —<br />
