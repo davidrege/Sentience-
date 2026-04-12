@@ -70,7 +70,7 @@ export default function CycleWheel() {
   const svgRef = useRef<SVGSVGElement>(null)
   const prevAngle = useRef(0)
   const prevTime = useRef(0)
-  const rafRef = useRef<number>()
+  const rafRef = useRef<number | undefined>(undefined)
 
   // Auto-rotate when idle
   useEffect(() => {
