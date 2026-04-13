@@ -103,9 +103,9 @@ export default function CycleWheel() {
           onPointerDown={onPointerDown}
         />
         {/* Crosshair */}
-        <line x1={CX - R.knob + 8} y1={CY} x2={CX + R.knob - 8} y2={CY}
+        <line x1={CX - 10} y1={CY} x2={CX + 10} y2={CY}
           stroke="#bbb" strokeWidth="0.6" style={{ pointerEvents: 'none' }}/>
-        <line x1={CX} y1={CY - R.knob + 8} x2={CX} y2={CY + R.knob - 8}
+        <line x1={CX} y1={CY - 10} x2={CX} y2={CY + 10}
           stroke="#bbb" strokeWidth="0.6" style={{ pointerEvents: 'none' }}/>
       </svg>
     </figure>
